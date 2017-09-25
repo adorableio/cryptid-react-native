@@ -9,6 +9,7 @@ function post (event, options) {
     headers: {
       'Content-Type': 'application/json',
     },
+    body: JSON.stringify(event),
     ...options
   };
   return fetch(url, mergedOptions);
