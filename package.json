@@ -1,6 +1,6 @@
 {
   "name": "cryptid-react-native",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "javascript react-native client for cryptid analytics",
   "main": "dist/index.js",
   "website": "https://cryptid.adorable.io",
@@ -37,13 +37,17 @@
     "eslint-config-adorable": "0.0.6",
     "eslint-plugin-jest": "^21.1.0",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
-    "jest": "^21.1.0"
+    "jest": "^21.1.0",
+    "jq2": "^1.0.1",
+    "semver": "^5.4.1"
   },
   "dependencies": {
     "react-native-device-info": "^0.11.0"
   },
   "eslintConfig": {
-    "extends": ["adorable"]
+    "extends": [
+      "adorable"
+    ]
   },
   "jest": {
     "collectCoverage": true,

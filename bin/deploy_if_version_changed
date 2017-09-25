@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+localVersion=`cat package.json | $(npm bin)/jq2 '$.version'`
+echo "Local version is at $localVersion"
+
+repoVersion=`npm view cryptid version`
+echo "Repository version is at $repoVersion"
+
+if [ -z `$(npm bin)/semver -r ">$repoVersion" $localVersion` ]; then
+  echo "Local version is less than or equal to repository version. Will not deploy."
+else
+  echo "Local version increments past repository version. Deploying."
+  $(npm bin)/ci-publish
+fi
+
+
