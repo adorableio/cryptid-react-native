@@ -5,6 +5,7 @@ const CRYPTID_ENDPOINT = 'https://cryptid.adorable.io/api/events';
 function post (event, options) {
   let url = options.url || CRYPTID_ENDPOINT;
   let mergedOptions = {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
