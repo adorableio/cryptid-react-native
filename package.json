@@ -1,0 +1,53 @@
+{
+  "name": "cryptid-react-native",
+  "version": "0.0.1",
+  "description": "javascript react-native client for cryptid analytics",
+  "main": "dist/index.js",
+  "website": "https://cryptid.adorable.io",
+  "scripts": {
+    "build:lib": "BABEL_ENV=lib $(npm bin)/babel src/ --ignore=src/__mocks__ --out-dir=dist",
+    "build": "rm -rf dist/ && npm run build:lib",
+    "watch:src": "npm run build:lib -- --watch",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adorableio/cryptid-react-native.git"
+  },
+  "keywords": [
+    "javascript",
+    "react-native",
+    "cryptid",
+    "analytics"
+  ],
+  "author": "Zachery Moneypenny <zachery@adorable.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adorableio/cryptid-react-native/issues"
+  },
+  "homepage": "https://github.com/adorableio/cryptid-react-native#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.7.2",
+    "eslint-config-adorable": "0.0.6",
+    "eslint-plugin-jest": "^21.1.0",
+    "eslint-plugin-prefer-object-spread": "^1.2.1",
+    "jest": "^21.1.0"
+  },
+  "dependencies": {
+    "react-native-device-info": "^0.11.0"
+  },
+  "eslintConfig": {
+    "extends": ["adorable"]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": {
+      "**/src/**"
+    }
+}
