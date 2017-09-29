@@ -1,6 +1,6 @@
 {
   "name": "cryptid-react-native",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "javascript react-native client for cryptid analytics",
   "main": "dist/index.js",
   "website": "https://cryptid.adorable.io",
